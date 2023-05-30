@@ -1,0 +1,205 @@
+/*L'etoile donne du style à TOUS les elements
+* {
+    margin: 0;
+    padding: 0;
+}*/
+
+body {
+    background: url(./assets/images/bgr.jpg) center/cover;
+   /*vh = 100% de la taille de l'ecran (viewport height) */
+    min-width: 100vh;
+    
+}
+
+
+p {
+color: rgb(180, 95, 95);
+}
+
+h1 {
+
+    background-color: rgba(16, 66, 132, 0.634);
+}
+
+.class-paragraphe2 {
+    background-color: green;
+    color: black;
+    text-align: left;
+    font-size: 1.5rem;
+        
+}
+
+/*#id-parag3 {
+    background-attachment: fixed;
+    background-color: blueviolet;
+    color: black;
+}*/
+
+.class-titre {
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px -1px 4px #0000001f;
+    color: brown;
+
+}
+
+.class-zone{
+    background: rgb(14, 14, 225);
+}
+
+main{
+    min-height: 500px;
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(179, 55, 55, 0.595);
+    border: 3px solid #dbdb33;
+    border-radius: 20px;
+    /*border-top: 10px solid blue;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 50px;*/
+    box-shadow: 2px -2px 5px 3px black;
+    padding: 20px;
+
+}
+
+.flexbox ,
+.grid,
+.absolute {
+    border: 1.5px solid yellowgreen;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    min-height: 150px;
+}
+
+
+/*FLEXBOX
+Sert a repartir equitablement des elements sur la page */
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexbox li {
+    list-style: none;
+    height: 150;
+    width: 150;
+    margin: 10px;
+    background: turquoise;
+    /*Centrer un unique element verticalement et horizontalement*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+}
+
+/*GRID*/
+.grid img {
+    width: 80%;
+    margin-bottom: 30px;
+    
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+
+.form input, textarea {
+    margin: 4px;
+    border: 1px solid brown;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    height: 80px;
+    
+}
+
+.form textarea {
+    grid-area: ta;
+    resize: none;
+}
+
+#btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+}
+
+#btn-submit:hover {
+    background: gray;
+}
+
+#surname:hover {
+    background: indigo;
+}
+
+/*ABSOLUTE*/
+/*Sans l'emement en relative, de base , l'element l'est par rapport
+ au body*/
+/*il faut mettre une position relative au parent pour contraindre
+ l'element en absolute dans ses frontieres */
+.absolute {
+    position: relative;
+}
+
+#circle1 {
+    height: 70;
+    width: 70;
+    background: skyblue;
+    position: absolute;
+    border-radius: 150px;
+    /* top: -10px; */
+    top: 5px;
+    right: 5px;
+}
+
+#circle2 {
+    height: 50px;
+    width: 50px;
+    background: thistle;
+    border-radius: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 100px;
+
+}
+
+/*RESPONSIVE*/
+ @media screen and (max-width: 900px) {
+    .grid-container{
+        display: block;
+    }
+ }
+
+ @media screen and (max-width: 755px) {
+     form {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas: 
+        "i1"
+        "i2"
+        "ta"
+        "bt";
+    }
+
+    input, 
+    textarea {
+        font-size: 1rem;
+    }
+ } */
+
+ 
